@@ -55,6 +55,7 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  display: grid;
 }
 
 /*=============================
@@ -124,31 +125,49 @@ body {
 
 .frame-container {
   position: relative;
-  height: 50%;
-  width: 50%;
+  height: 70%;
+  width: 40%;
   bottom: 0;
+  left: 60%;
   background-image: url('img/top_main_rightup_back.png');
   background-size: cover;
-  overflow: hidden;   /*フレームの外にはみ出さないようにしている。 */
+  /* overflow: hidden;    */
+  /*フレームの外にはみ出さないようにしている。 */
   object-fit: cover;
   background-position: bottom;
+  z-index: 10;
 }
-.person-image {
+.person-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; /* 人物画像の幅 */
-  height: 200%; /* 人物画像の高さ */
+  height: 230%; /* 人物画像の高さ */
   object-fit: cover;
   opacity: 0.5;
-  /* clip-path: polygon(
+  clip-path: polygon(
     0 0, 
     100% 0%, 
-    100% 45%, 
-    50% 100%, 
-    0 45%
-  ); */
+    100% 35%, 
+    50% 40.5%, /* 中央の高さを右の値で設定 */
+    0 35%
+  );
+  z-index: 10;
 }
 
+/* =========================
+=== top中央 person
+========================= */
+.main-container {
+  position: relative;
+  z-index: 20;
+  width: 40vh;
+  height: 70vh;
+}
 
-
+.person-img {
+  object-fit: cover;
+  width: 40vh;
+  height: 70vh;
+  position: absolute;
+}
