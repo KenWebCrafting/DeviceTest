@@ -7,7 +7,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -40,7 +40,7 @@ body {
   color: #9c8fc2;
 }
 
-.container {
+.warpper {
   width: 100%;
   max-width: 430px; /* iPhone 14 Maxの幅に合わせる */
   position: relative;
@@ -103,4 +103,52 @@ body {
 .touch-here-image {
   z-index: 40;
 }
+
+
+
+.container {
+  padding: 110px 0 200px;
+  background-color: darkcyan;
+}
+.inner {
+  width: 90%;
+  margin: auto;
+  padding: auto;
+  background-color: chocolate;
+}
+
+
+/* =========================
+=== top右上　オーバーレイ反映指定。
+========================= */
+
+.frame-container {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  background-image: url('img/top_main_rightup_back.png');
+  background-size: cover;
+  /* overflow: hidden;   フレームの外にはみ出さないようにしている。 */
+  object-fit: cover;
+  background-position: bottom;
+}
+.person-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 人物画像の幅 */
+  height: 100%; /* 人物画像の高さ */
+  object-fit: cover;
+  opacity: 0.5;
+  /* clip-path: polygon(
+    0 0, 
+    100% 0%, 
+    100% 45%, 
+    50% 100%, 
+    0 45%
+  ); */
+}
+
+
 
