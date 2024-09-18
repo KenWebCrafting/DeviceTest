@@ -57,7 +57,10 @@ body {
   width: 100vw;
   display: grid;
 }
-
+img {
+  width: 100%;
+  height: auto;
+}
 /*=============================
 ==画像関係
 =============================*/
@@ -170,4 +173,16 @@ body {
   width: 40vh;
   height: 70vh;
   position: absolute;
+}
+
+.test2 {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.test {
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
