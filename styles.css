@@ -42,7 +42,6 @@ body {
 
 .warpper {
   width: 100%;
-  max-width: 430px; /* iPhone 14 Maxの幅に合わせる */
   position: relative;
   overflow: hidden;
   background-color: #ffffff;
